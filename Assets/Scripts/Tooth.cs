@@ -14,6 +14,15 @@ public class Tooth : MonoBehaviour
     private HashSet<KeyCode> keys_down = new HashSet<KeyCode>();
     [SerializeField]
     private int number_of_keys_down = 0;
+    private Vector2 mouseLoc;
+    private Vector3 lookLeft = new Vector3(0, 180, 0);
+    private Vector3 lookRight = new Vector3(0, 0, 0);
+    private Coroutine animateCoroutine;
+    private bool animateMovingUp;
+    [SerializeField]
+    private float animateSpeed = 0.3f; // idol animation speed
+    private bool idling = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +36,16 @@ public class Tooth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        mouseLoc = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (mouseLoc.x > transform.position.x)
+        {
+            transform.eulerAngles = lookRight;
+        }
+        else
+        {
+            transform.eulerAngles = lookLeft;
+        }
+
         foreach (var key in keys_down)
         {
             if (Input.GetKeyDown(key))
@@ -37,6 +56,17 @@ public class Tooth : MonoBehaviour
             {
                 number_of_keys_down--;
             }
+        }
+
+        if (number_of_keys_down == 0 && !idling && !nail.GetWarping())
+        {
+            idling = true;
+            animateCoroutine = StartCoroutine(Animate(transform.position.y));
+        }
+        if (number_of_keys_down > 0 || nail.GetWarping())
+        {
+            idling = false;
+            StopCoroutine(animateCoroutine);
         }
 
         if (true)
@@ -67,6 +97,32 @@ public class Tooth : MonoBehaviour
                 gameObject.transform.position = new Vector3(gameObject.transform.position.x - player_speed, gameObject.transform.position.y, gameObject.transform.position.z);
             }
 
+        }
+    }
+
+    private IEnumerator Animate(float startPos)
+    {
+        while (idling)
+        {
+            if (transform.position.y >= startPos + 0.1f)
+            {
+                animateMovingUp = false;
+            }
+            if (transform.position.y <= startPos - 0.1f)
+            {
+                animateMovingUp = true;
+            }
+
+            if (animateMovingUp)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y + .025f, transform.position.z);
+            }
+            if (!animateMovingUp)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y - .025f, transform.position.z);
+            }
+
+            yield return new WaitForSeconds(animateSpeed);
         }
     }
 }
