@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1027287111164318006}
   m_Layer: 0
   m_Name: Nail
-  m_TagString: Untagged
+  m_TagString: Nail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,8 +163,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tooth: {fileID: 0}
   distToTooth: 0
-  nailSpeed: 0.004
-  warpSpeed: 0.001
-  maxDistFromTooth: 3
+  startingNailSpeed: 15
+  warpSpeed: 60
+  maxDistFromTooth: 4
+  startingMaxDist: 2
   nailRPM: 5
+  atkPower: 1
   cam: {fileID: 0}
+  jumpEnergy: 1
+  jumpRechargeSpeed: 1.7

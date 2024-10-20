@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Traversable
+  - Nail
+  - Enemy
+  - LineEnemy
+  - Walls
+  - Tooth
+  - Projectile
+  - Potion
   layers:
   - Default
   - TransparentFX

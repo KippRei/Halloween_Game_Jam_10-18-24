@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &281951187762091020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1606132915709522455}
+  - component: {fileID: 4666454372980609255}
+  m_Layer: 0
+  m_Name: GameLoop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1606132915709522455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281951187762091020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4666454372980609255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281951187762091020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2ae885be0253740ae451db9b8b5359, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  witchPrefab: {fileID: 5926552356828262195, guid: 81c0c97526ac5e543a8b0f92c5e0d1bf, type: 3}
+  batSpawnPoints: {fileID: 0}
+  batPrefab: {fileID: 5929036242481895388, guid: d5a2490cfe2d2384db7737ec1123f91e, type: 3}
+  currNumOfLine: 0
+  lineSpawnFreq: 10
+  lineSpawnPoint: {fileID: 0}
+  lineVertSpawnPoint: {fileID: 0}
+  linePrefab: {fileID: 8209632643060797721, guid: abb264b50106c2d40a80e39aa49cf669, type: 3}
+  lineVertPrefab: {fileID: 8209632643060797721, guid: 453080e12849d70429fb73c37b2a7bc9, type: 3}
+  tooth: {fileID: 0}
+  nail: {fileID: 0}
+  numOfBats: 3
+  currNumOfBats: 0
+  healthFill: {fileID: 0}
+  xpFill: {fileID: 0}
+  jumpFill: {fileID: 0}
+  levelNumText: {fileID: 0}
+  pauseScreen: {fileID: 0}
+  isPaused: 0
