@@ -54,14 +54,15 @@ public class Enemy : MonoBehaviour
             int dropPotion = Random.Range(0, 11);
             if (dropPotion <= 2)
             {
-                Instantiate(potion, transform.position, Quaternion.identity);
+                Instantiate(potion, new Vector3(transform.position.x, transform.position.y, -1), Quaternion.identity);
             }
             Destroy(gameObject);
         }
         animTime += Time.deltaTime;
+        currSprite = sr.sprite;
         if (animTime >= 0.3)
         {
-            currSprite = sr.sprite;
+            
             animTime = 0;
             if (currSprite == one)
             {
@@ -98,7 +99,7 @@ public class Enemy : MonoBehaviour
             MoveTowards(tooth.transform.position, this);
             yield return new WaitForSeconds(speed);
         }
-        Vector2 retreatTo = transform.position;
+        Vector3 retreatTo = transform.position;
         int randX = (int)Mathf.Floor(Random.value * 100);
         int randY = (int)Mathf.Floor(Random.value * 100);
         retreatTo.x = retreatTo.x + (retreatDist * Mathf.Pow(-1, randX));

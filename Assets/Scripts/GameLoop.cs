@@ -90,7 +90,7 @@ public class GameLoop : MonoBehaviour
                 Instantiate(lineVertPrefab, lineVertSpawnPoint.transform.position, UnityEngine.Quaternion.identity);
             }
         }
-        if (tooth.currLevel > 5 && !witchSpawned)
+        if (tooth.currLevel >= 5 && !witchSpawned)
         {
             witchSpawned = true;
             Instantiate(witchPrefab, new UnityEngine.Vector3(0,0,0), UnityEngine.Quaternion.identity);

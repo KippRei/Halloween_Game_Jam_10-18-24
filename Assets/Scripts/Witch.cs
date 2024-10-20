@@ -13,7 +13,7 @@ public class Witch : MonoBehaviour
     private float timeSinceLastWarp = 0;
     private bool lastAtkCross = false;
     private List<GameObject> locs = new List<GameObject>();
-    private int health = 35;
+    private int health = 25;
     SpriteRenderer sr;
     public Sprite one, two;
     private bool hit = false;
@@ -36,11 +36,11 @@ public class Witch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (health > 17)
+        if (health > 13)
         {
             sr.sprite = one;
         }
-        if (health <= 17)
+        if (health <= 12)
         {
             sr.sprite = two;
         }
@@ -85,7 +85,7 @@ public class Witch : MonoBehaviour
         {
             Time.timeScale = 0.3f;
             counter += Time.unscaledDeltaTime;
-            if (counter > 2.5)
+            if (counter > 2.0)
             {
                 SceneManager.LoadScene("Ending", LoadSceneMode.Single);
             }

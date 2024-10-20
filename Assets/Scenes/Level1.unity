@@ -16249,6 +16249,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2106440100}
     - target: {fileID: 4666454372980609255, guid: da7536000d468dc43962f5191548ded9, type: 3}
+      propertyPath: batPrefab
+      value: 
+      objectReference: {fileID: 5929036242481895388, guid: d5a2490cfe2d2384db7737ec1123f91e, type: 3}
+    - target: {fileID: 4666454372980609255, guid: da7536000d468dc43962f5191548ded9, type: 3}
       propertyPath: healthFill
       value: 
       objectReference: {fileID: 389261881}
@@ -16946,7 +16950,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4201709867917547993, guid: 4c2d9bd0e69cb9841aeb2e6452d62a5c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4201709867917547993, guid: 4c2d9bd0e69cb9841aeb2e6452d62a5c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16976,9 +16980,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4604098849702047916, guid: 4c2d9bd0e69cb9841aeb2e6452d62a5c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5620819057117060329, guid: 4c2d9bd0e69cb9841aeb2e6452d62a5c, type: 3}
       propertyPath: m_Name
       value: BatSpawnPoints
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473252429314905450, guid: 4c2d9bd0e69cb9841aeb2e6452d62a5c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6571976901628247202, guid: 4c2d9bd0e69cb9841aeb2e6452d62a5c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7064932295775355021, guid: 4c2d9bd0e69cb9841aeb2e6452d62a5c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9125930686671863731, guid: 4c2d9bd0e69cb9841aeb2e6452d62a5c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
